@@ -115,28 +115,28 @@ img {
 .spinner .circle {
   animation: spinners linear infinite;
   position: absolute;
-  border: 5px solid transparent;
+  border: 4px solid transparent;
   border-top-color: rgb(118, 113, 255);
   border-radius: 50%;
 }
 
 .spinner .one {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-top-color: rgb(118, 113, 255);
   animation-duration: 0.85s;
 }
 
 .spinner .two {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-top-color: #ffc31d;
   animation-duration: 0.95s;
 }
 
 .spinner .three {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-top-color: #ff7c77;
   animation-duration: 1.05s;
 }
@@ -169,5 +169,11 @@ img {
   .navLink {
     text-decoration: none;
     margin-left: 20px;
+  }
+  .cartCard{
+    gap: 20px;
+  }
+  .spinner{
+    width:auto;
   }
 }
