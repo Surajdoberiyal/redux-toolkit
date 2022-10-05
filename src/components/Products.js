@@ -25,7 +25,13 @@ const Products = () => {
     };
 
     if (status === STATUSES.LOADING) {
-        return <h2>Loading....</h2>;
+        return (
+            <div className="spinner">
+            <div className="circle one"></div>
+            <div className="circle two"></div>
+            <div className="circle three"></div>
+        </div>
+        )
     }
 
     if (status === STATUSES.ERROR) {
@@ -37,12 +43,14 @@ const Products = () => {
                 <div className="card" key={product.id}>
                     <img src={product.image} alt="" />
                     <h4>{product.title}</h4>
-                    <h5>{product.price}</h5>
+                    <h3>₹ {product.price}</h3>
                     <button onClick={() => handleAdd(product)} className="btn">
                         Add to cart
                     </button>
                 </div>
             ))}
+            <br/>
+            <br/>
         </div>
     );
 };

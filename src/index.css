@@ -1,63 +1,173 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding: 20px;
-    background: whitesmoke;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* padding: 20px; */
+  background: whitesmoke;
 }
 img {
-    height: 80px;
+  height: 80px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 97);
+}
+.NavbarWrapper {
+  background-color: white;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 .card {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 320px;
 }
 .productsWrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 30px;
+  padding: 25px;
+}
+.productsWrapper h4 {
+  color: rgb(0, 0, 97);
+}
+.cartWrapper {
+  padding: 25px;
 }
 .btn {
-    border: none;
-    outline: none;
-    background: #764abc;
-    padding: 5px 10px;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  border: none;
+  outline: none;
+  background: #764abc;
+  padding: 7px 14px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background: #513282;
+  background: #513282;
 }
 
 .heading {
-    padding: 25px 0;
+  text-align: center;
+  padding: 20px 0;
+}
+.productHeading {
+  font-size: 26px;
+  margin: 10px 0px;
+  padding: 0px 25px;
 }
 .cartCount {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
 }
 .navLink {
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  color: black;
+}
+.navLink:hover {
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.cartCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 5px;
 }
 
-.cartCard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 14px;
-    border-radius: 5px;
+/* Loading css  */
+
+.spinner {
+  margin: 20px auto;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.spinner .circle {
+  animation: spinners linear infinite;
+  position: absolute;
+  border: 5px solid transparent;
+  border-top-color: rgb(118, 113, 255);
+  border-radius: 50%;
+}
+
+.spinner .one {
+  width: 50px;
+  height: 50px;
+  border-top-color: rgb(118, 113, 255);
+  animation-duration: 0.85s;
+}
+
+.spinner .two {
+  width: 70px;
+  height: 70px;
+  border-top-color: #ffc31d;
+  animation-duration: 0.95s;
+}
+
+.spinner .three {
+  width: 100px;
+  height: 100px;
+  border-top-color: #ff7c77;
+  animation-duration: 1.05s;
+}
+
+@keyframes spinners {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+  .productHeading {
+    font-size: 18px;
+    text-align: center;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  .cartCount {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+  .navLink {
+    text-decoration: none;
+    margin-left: 20px;
+  }
 }
